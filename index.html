@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Harte | Software Developer</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-color: #e5e5e5;       /* Millennium Grey */
+            --card-bg: #fafafa;        /* Off-white */
+            --text-primary: #2d2d2d;
+            --text-secondary: #666666;
+            --btn-bg: #2d2d2d;
+            --btn-hover: #1a1a1a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Card Container */
+        .profile-card {
+            background-color: var(--card-bg);
+            padding: 48px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            max-width: 400px;
+            width: 85%;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Typography */
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            margin: 0 0 32px 0;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Button Styling */
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--btn-bg);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .email-btn:hover {
+            background-color: var(--btn-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* SVG Icon */
+        .email-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <h1>Michael Harte</h1>
+        <p>Software Developer</p>
+        
+        <a href="mailto:michael@michaelharte.com" class="email-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Email Me
+        </a>
+    </div>
+
+</body>
+</html>
