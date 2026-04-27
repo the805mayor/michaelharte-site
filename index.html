@@ -6,6 +6,10 @@
     <title>Michael Harte | FileMaker Pro Developer</title>
     <style>
         /* CSS Reset & Variables */
+        * {
+            box-sizing: border-box; /* Ensures padding is calculated inside the element's width */
+        }
+
         :root {
             --bg-color: #e5e5e5;       /* Millennium Grey */
             --card-bg: #fafafa;        /* Off-white */
@@ -17,14 +21,14 @@
 
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px; /* Guarantees a minimum gap around the edges on mobile */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             background-color: var(--bg-color);
             color: var(--text-primary);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Changed to min-height to prevent issues on very short screens */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -37,7 +41,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
             text-align: center;
             max-width: 400px;
-            width: 85%;
+            width: 100%; /* Takes full width available inside the body's padding */
             border: 1px solid #e0e0e0;
         }
 
@@ -83,6 +87,13 @@
             width: 18px;
             height: 18px;
             fill: currentColor;
+        }
+
+        /* Responsive tweak for very small phones */
+        @media (max-width: 480px) {
+            .profile-card {
+                padding: 40px 24px; /* Slightly reduces internal padding on tiny screens */
+            }
         }
     </style>
 </head>
